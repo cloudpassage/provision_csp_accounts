@@ -25,7 +25,12 @@ Requirements are listed in `requirements.txt`. For convenience, you may install
 these requirements with `python2.7 -m pip install -r requirements.txt` from the
 base directory of this repository.
 
-## How do I run the tool?
+## How do I use the tool?
+
+IMPORTANT: This tool assumes that you already have roles configured in all
+accounts described in your CSV file. This tool will error out if it
+encounters an ARN/ExternalID pair that don't work. So provision the roles
+required for Halo to monitor your accounts _before_ you run this tool.
 
 usage:
 `provision_aws_accounts.py [-h] [--dry_run] halo_api_key
