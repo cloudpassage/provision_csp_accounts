@@ -5,6 +5,7 @@ ARG CC_TEST_REPORTER_ID
 
 RUN apt-get update && \
     apt-get install -y \
+        curl \
         git \
         python2.7 \
         python-pip
