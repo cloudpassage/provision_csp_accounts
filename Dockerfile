@@ -14,4 +14,7 @@ WORKDIR /app/
 
 RUN pip install -r requirements-test.txt
 
-RUN python2.7 -mpy.test --cov=provisioner  --cov-report term-missing /app/test
+RUN python2.7 -m py.test \
+    --cov=provisioner  \
+    --cov-report term-missing \
+    /app/test
