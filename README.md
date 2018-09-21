@@ -23,6 +23,29 @@ base directory of this repository.
 
 ## How do I run the tool?
 
+usage:
+`provision_aws_accounts.py [-h] [--dry_run] halo_api_key
+halo_api_secret_key csv_file_location external_id account_id_column
+account_display_name_column target_halo_group_id role_name`
+
+Bulk-provision AWS accounts in Halo
+
+```
+positional arguments:
+  halo_api_key                Halo API key
+  halo_api_secret_key         Halo API secret
+  csv_file_location           Path to CSV file
+  external_id                 External ID for AWS role assumption
+  account_id_column           CSV column containing AWS account ID
+  account_display_name_column CSV column for account display name
+  target_halo_group_id        ID of Halo group for provisioning CSP accounts
+  role_name                   Name of role to be used for auditing AWS accounts.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --dry_run             Dry run. Do not make changes.
+```
+
 ## Error messages?
 
 Meaningful error messages will be thrown for the following conditions:
