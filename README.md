@@ -1,5 +1,9 @@
 # provision_csp_accounts
 
+[![Build Status](https://travis-ci.com/cloudpassage/provision_csp_accounts.svg?branch=master)](https://travis-ci.com/cloudpassage/provision_csp_accounts)
+[![Maintainability](https://api.codeclimate.com/v1/badges/681a5a187498df3a098e/maintainability)](https://codeclimate.com/github/cloudpassage/provision_csp_accounts/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/681a5a187498df3a098e/test_coverage)](https://codeclimate.com/github/cloudpassage/provision_csp_accounts/test_coverage)
+
 ## What is this?
 
 This is a tool for provisioning AWS accounts in the CloudPassage Halo platform.

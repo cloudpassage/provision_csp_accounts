@@ -3,4 +3,8 @@ language: python
 services:
 - docker
 script:
-- docker build -t test_image .
+- docker build -t test_image --build-arg CC_TEST_REPORTER_ID=${CC_TEST_REPORTER_ID}
+  .
+env:
+  global:
+    secure: urysLnsetYwiQS8+ys//Pa7aG4lYMBhpwUZHNnTki9RBgSKb6skQX3ujrUhOcaX4abkh//H24YJYie13kXBA6k3KlYKWfL2z/BrAA15MYYvC55h2Fl48pPjMkF1Sz4OdjGog1QYpKhQLeVQF6/DTjoHY+w9GS+AY241F0cgUf4K8DORi6pQHfHXvv1SFaaRyBQg4/yBNjYLrG1x+jy6kswCF/1WCcN2XdbANGNqgZ1kNrYhVvgpiMQHpSmh0QM1ilarEwKkyAorrW/9WSlk4lwjVhza2JwblvIh5YySkuyxlO2A7Gj+YsdVuRj5iFuwF35NWxmE/8h9J/5a2p/YguDNwBpu58DQp4xvsxCUPrTfgETx8WXP/vPDXtiJRhmquAeYJCJWjRsSAi65iEf2qHMFLZzjZJyl0O/CN7z525b3nyYIORRpH0tuPTCt3IYFWX4cAsfq8lCqbyjl9AtHMplf9E3MZ1mSXfMIG7sag10/sbmnBY8qLi2KQHyrJM4lvu9aIxrGs2Ya4/tgCohyn7juARCsGT0gZYVAK1VIG4V1/xbiJrvSj9RrNH6j6SUZ6SY4Sc19NytPjaHucb6rnva243kuRRy4RargzUo6NUTPQvRzhhDUs5bcqctdIOBTbibk3fKo82eJbsdLIDas7xPh+5Ly5Y7eE++6apb5GBbU=
