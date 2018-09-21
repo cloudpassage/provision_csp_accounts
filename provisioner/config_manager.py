@@ -41,6 +41,6 @@ class ConfigManager(object):
         parser = argparse.ArgumentParser(description=desc)
         for arg in args:
             parser.add_argument(arg[0], help=arg[1])
-            parser.add_argument('--dry_run', action="store_true",
-                                help="Dry run. Do not make changes.")
+        parser.add_argument('--dry_run', action="store_true",
+                            help="Dry run. Do not make changes.")
         parser.parse_args(namespace=self)
