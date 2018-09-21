@@ -53,3 +53,4 @@ Meaningful error messages will be thrown for the following conditions:
 * Halo API key does not have sufficient privileges to provision accounts.
 * CSV file does not exist.
 * Columns for account ID and account display name do not exist in CSV.
+* ARN and external ID are invalid.

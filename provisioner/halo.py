@@ -58,6 +58,7 @@ class Halo(object):
             sys.exit(1)
         except cloudpassage.CloudPassageValidation as e:
             print("Validation failure when creating account: %s" % e)
+            print("ARN and external ID will fail if they don't exist.")
             sys.exit(1)
         return halo_csp_account_id
 
@@ -96,7 +97,7 @@ class Halo(object):
         return
 
     @classmethod
-    def validate_object_id(object_id):
+    def validate_object_id(cls, object_id):
         """Validates object ID (server_id, policy_id, etc...)
 
         This function validates Object IDs with the intent of guarding against
