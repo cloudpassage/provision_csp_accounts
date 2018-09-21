@@ -31,7 +31,7 @@ class Halo(object):
         return accounts
 
     def provision_csp_account(self, account_id, display_name, role_name,
-                              external_id, group_id, csp_account_type="aws"):
+                              external_id, group_id, csp_account_type="AWS"):
         """Provision a CSP account in Halo.
 
         Args:
@@ -55,6 +55,9 @@ class Halo(object):
             halo_csp_account_id = http_helper.post("/v1/csp_accounts", payload)
         except cloudpassage.CloudPassageAuthorization as e:
             print("Failed to provision account. Not authorized!\n%s" % e)
+            sys.exit(1)
+        except cloudpassage.CloudPassageValidation as e:
+            print("Validation failure when creating account: %s" % e)
             sys.exit(1)
         return halo_csp_account_id
 
