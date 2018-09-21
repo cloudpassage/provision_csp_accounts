@@ -1,3 +1,4 @@
+#!/usr/bin/env python2.7
 """Bulk-provision AWS accounts."""
 import provisioner
 
