@@ -48,24 +48,9 @@ class TestIntegrationHalo(object):
         retval = provisioner.Halo.validate_object_id(testval)
         assert retval is True
 
-    def test_halo_validate_object_id_list_ok(self):
-        """List of well-formed IDs pass."""
-        testval = ["92a11bcc905f11e896cb7f3cbd0e8cfd",
-                   "92a11bcc905f11e896cb7f3cbd0e8cfe"]
-        retval = provisioner.Halo.validate_object_id(testval)
-        assert retval is True
-
     def test_halo_validate_object_id_string_bad(self):
         """Badly-formed ID raises CloudPassageValidation."""
         testval = "92a11bcc905f11e896cb7f3cbd0../e8cfd"
-        with pytest.raises(cloudpassage.CloudPassageValidation) as e:
-            provisioner.Halo.validate_object_id(testval)
-        assert e
-
-    def test_halo_validate_object_id_list_bad(self):
-        """Badly-formed ID raises CloudPassageValidation."""
-        testval = ["92a11bcc905f11e896cb7f3cbd0e8cfd",
-                   "92a11bcc905f11e896cb7f3cb../asde"]
         with pytest.raises(cloudpassage.CloudPassageValidation) as e:
             provisioner.Halo.validate_object_id(testval)
         assert e

@@ -119,10 +119,6 @@ class Halo(object):
                 raise cloudpassage.CloudPassageValidation(message)
             else:
                 return True
-        elif isinstance(object_id, list):
-            for individual in object_id:
-                cls.validate_object_id(individual)
-            return True
         else:
             message = "Wrong type for objectID:%s" % str(type(object_id))
             raise cloudpassage.CloudPassageValidation(message)
