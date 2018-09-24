@@ -113,7 +113,7 @@ class Halo(object):
             CloudPassageValidation if validation fails.
         """
         rex = re.compile('^[A-Za-z0-9-]+$')
-        if isinstance(object_id, (str, unicode)):
+        if isinstance(object_id, (basestring)):
             if not rex.match(object_id):
                 message = "Object ID failed validation: %s" % object_id
                 raise cloudpassage.CloudPassageValidation(message)
@@ -121,11 +121,8 @@ class Halo(object):
                 return True
         elif isinstance(object_id, list):
             for individual in object_id:
-                if not rex.match(individual):
-                    message = "Object ID failed validation: %s" % object_id
-                    raise cloudpassage.CloudPassageValidation(message)
+                cls.validate_object_id(individual)
             return True
         else:
             message = "Wrong type for objectID:%s" % str(type(object_id))
-            raise TypeError(message)
-        return
+            raise cloudpassage.CloudPassageValidation(message)
