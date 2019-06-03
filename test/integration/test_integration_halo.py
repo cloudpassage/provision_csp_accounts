@@ -61,3 +61,10 @@ class TestIntegrationHalo(object):
         with pytest.raises(cloudpassage.CloudPassageValidation) as e:
             provisioner.Halo.validate_object_id(testval)
         assert e
+
+    def test_halo_integration_string(self):
+        """Ensure integration string constructed correctly with package name and version"""
+        integration_string_desired = "Provision-CSP-Accounts/%s" % provisioner.__version__
+        config = self.instantiate_config_object_nonworking()
+        halo = self.instantiate_halo_object(config)
+        assert integration_string_desired == halo.integration

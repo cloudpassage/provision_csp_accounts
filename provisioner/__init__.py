@@ -4,5 +4,5 @@ from csv_consumer import CsvConsumer  # NOQA
 from halo import Halo  # NOQA
 
 
-__version__ = "1.0"
+__version__ = "1.1"
 __author__ = "awilson@cloudpassage.com"
