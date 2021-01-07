@@ -63,3 +63,8 @@ Meaningful error messages will be thrown for the following conditions:
 * CSV file does not exist.
 * Columns for account ID and account display name do not exist in CSV.
 * ARN and external ID are invalid.
+
+<!---
+#CPTAGS:community-supported automation
+#TBICON:images/python_icon.png
+-->
